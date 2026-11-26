@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{baseUrl}}/tracks"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"artist_id\": 1,\r
+
+    \  \"title\": \"Get Lucky\",\r
+
+    \  \"album\": \"Random Access Memories\",\r
+
+    \  \"genre\": \"Electronic\",\r
+
+    \  \"duration_sec\": 248\r
+
+    }\r\n"
+order: 4000

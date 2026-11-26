@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{baseUrl}}/podcasts"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"title\": \"Tech Talks Daily\",\r
+
+    \  \"host\": \"Neil Hughes\",\r
+
+    \  \"category\": \"Technology\"\r
+
+    }"
+order: 5000

@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{baseUrl}}/auth/login"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"email\": \"keven@soundvibe.com\",\r
+
+    \  \"password\": \"password123\"\r
+
+    }\r\n"
+scripts:
+  - type: afterResponse
+    code: "const res = pm.response.json();\r
+
+      pm.collectionVariables.set(\"token\", res.access_token);\r\n"
+    language: text/javascript
+order: 2000

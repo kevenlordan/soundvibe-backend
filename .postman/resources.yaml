@@ -1,0 +1,12 @@
+# Use this workspace to collaborate
+workspace:
+  id: 182ef5bc-3e92-403a-8abe-b966441cb408
+
+localResources:
+  specs:
+    - ../postman/specs/SoundVibe_API/SoundVibe_API.json
+    - ../C:/Users/keven/soundvibe-backend/src/SoundVibe_API.json
+resourceNameMappings:
+  specs:
+    - ../postman/specs/SoundVibe_API/SoundVibe_API.json: SoundVibe_API
+    - ../src/SoundVibe_API.json: SoundVibe_API.json

@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{baseUrl}}/auth/register"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"username\": \"keven_dev\",\r
+
+    \  \"email\": \"keven@soundvibe.com\",\r
+
+    \  \"password\": \"password123\"\r
+
+    }"
+order: 1000

@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{baseUrl}}/playlists"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"user_id\": 1,\r
+
+    \  \"name\": \"Late Night Coding\"\r
+
+    }\r\n"
+order: 6000

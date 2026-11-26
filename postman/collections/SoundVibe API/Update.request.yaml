@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{baseUrl}}/tracks/1"
+method: PATCH
+body:
+  type: json
+  content: "{\r
+
+    \  \"title\": \"Get Lucky (Radio Edit)\"\r
+
+    }\r\n"
+order: 7000

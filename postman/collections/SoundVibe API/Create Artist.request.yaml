@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{baseUrl}}/artists"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Daft Punk\",\r
+
+    \  \"country\": \"France\",\r
+
+    \  \"bio\": \"French electronic music duo\"\r
+
+    }\r\n"
+order: 3000

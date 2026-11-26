@@ -1,0 +1,239 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "SoundVibe_API",
+    "version": "1.0.0",
+    "description": ""
+  },
+  "servers": [
+    {
+      "url": "{{baseUrl}}"
+    }
+  ],
+  "paths": {
+    "/auth/register": {
+      "post": {
+        "summary": "Register",
+        "responses": {},
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string",
+                    "format": "email"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "username": "keven_dev",
+                "email": "keven@soundvibe.com",
+                "password": "password123"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "summary": "Login",
+        "responses": {},
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "format": "email"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "email": "keven@soundvibe.com",
+                "password": "password123"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/artists": {
+      "post": {
+        "summary": "Create Artist",
+        "responses": {},
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "country": {
+                    "type": "string"
+                  },
+                  "bio": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "name": "Daft Punk",
+                "country": "France",
+                "bio": "French electronic music duo"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tracks": {
+      "post": {
+        "summary": "Create Track",
+        "responses": {},
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "artist_id": {
+                    "type": "integer"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "album": {
+                    "type": "string"
+                  },
+                  "genre": {
+                    "type": "string"
+                  },
+                  "duration_sec": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "example": {
+                "artist_id": 1,
+                "title": "Get Lucky",
+                "album": "Random Access Memories",
+                "genre": "Electronic",
+                "duration_sec": 248
+              }
+            }
+          }
+        }
+      }
+    },
+    "/podcasts": {
+      "post": {
+        "summary": "Create Podcast",
+        "responses": {},
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "host": {
+                    "type": "string"
+                  },
+                  "category": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "title": "Tech Talks Daily",
+                "host": "Neil Hughes",
+                "category": "Technology"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/playlists": {
+      "post": {
+        "summary": "Create Playlist",
+        "responses": {},
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "user_id": {
+                    "type": "integer"
+                  },
+                  "name": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "user_id": 1,
+                "name": "Late Night Coding"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tracks/1": {
+      "patch": {
+        "summary": "Update",
+        "responses": {},
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              },
+              "example": {
+                "title": "Get Lucky (Radio Edit)"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "security": [
+    {
+      "BearerAuth": []
+    }
+  ]
+}
